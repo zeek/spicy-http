@@ -1,0 +1,17 @@
+[package]
+summary = Spicy-based analyzer for the HTTP protocol
+description = Spicy-based analyzer for the HTTP protocol.
+script_dir = analyzer
+plugin_dir = build/spicy-modules
+build_command = unset -v CXX CXXFLAGS LD LDFLAGS && mkdir -p build && cd build && SPICYZ=%(package_base)s/spicy-plugin/build/bin/spicyz cmake .. && cmake --build .
+test_command = unset -v CXX CXXFLAGS LD LDFLAGS && cd tests && PATH=$(zkg config plugin_dir)/packages/spicy-plugin/bin:$PATH btest -d -j $(nproc)
+
+[template]
+source = https://github.com/bbannier/package-template-spicy
+version = master
+commit = c14f0756
+zkg_version = 2.12.0-13
+
+[template_vars]
+namespace = HTTP
+name = Requests
