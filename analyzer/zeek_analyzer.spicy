@@ -4,7 +4,7 @@
 
 module Zeek_HTTP;
 
-import HTTP from protocols;
+import HTTP;
 import zeek;
 
 # Create an http_message_state instance. We only set a subset of the fields that we happen to know Zeek needs.
