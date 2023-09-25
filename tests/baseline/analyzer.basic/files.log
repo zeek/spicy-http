@@ -9,5 +9,5 @@
 #fields	fuid	source	depth	analyzers	mime_type	filename	total_bytes
 #types	string	string	count	set[string]	string	string	count
 #close XXXX-XX-XX-XX-XX-XX
-XXXXXXXXXXXXXXXXX	HTTP	0	MD5,SHA1	text/json	-	366
-XXXXXXXXXXXXXXXXX	HTTP	0	MD5,SHA1	text/plain	-	11
+FM47gX3vI5ofQPm1li	HTTP	0	MD5,SHA1	text/plain	-	11
+FZjUS57tUkGFTibv3	HTTP	0	MD5,SHA1	text/json	-	366
