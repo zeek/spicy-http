@@ -27,7 +27,7 @@ public type Requests = unit {
     :  Request[];
 };
 
-public type Request = unit {
+type Request = unit {
     request: RequestLine;
     message: Message(False, True);
 };
@@ -38,7 +38,7 @@ public type Replies = unit {
     :  Reply[];
 };
 
-public type Reply = unit {
+type Reply = unit {
     reply: ReplyLine;
     message: Message(reply_code_needs_body(self.reply.status), False);
 };
@@ -185,7 +185,7 @@ type Body = unit(inout msg: Message, delivery_mode: DeliveryMode, is_request: bo
  		}
 };
 
-public type Content = unit(msg: Message) {
+type Content = unit(msg: Message) {
     data: bytes &chunked &eod {
         if ( |self.data| > 0 ) {
             self.have_content = True;
