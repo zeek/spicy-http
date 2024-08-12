@@ -10,8 +10,7 @@ jobs:
     strategy:
       matrix:
         version:
-          - zeek:6.0
-          - zeek:6.2
+          - zeek:7.0
           - zeek-dev:latest
 
       fail-fast: false
